@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      BranchFinder.com | Manage your branches ang get details about all your
+      branches in free
+    </title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- leaflet library link -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+
+    <script defer src="js/branch.js"></script>
+  </head>
+  <body>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title"><img src="images/logo.png" alt="logo" /></div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="">About us</a>
+        <a href="#">Contact us</a>
+        <button class="login-btn">Login</button>
+      </div>
+    </div>
+
+    <div class="branch-main">
+      <div class="sidebar">
+        <ul class="workouts">
+          <form class="form">
+            <div class="form__row">
+              <select
+                class="form__input form__input--type"
+                placeholder="Select "
+              >
+                <option value="small">small</option>
+                <option value="large">large</option>
+              </select>
+            </div>
+
+            <div class="form__row">
+              <input
+                class="form__input form__input--sale"
+                placeholder="Average sale "
+              />
+            </div>
+            <div class="form__row">
+              <input
+                class="form__input form__input--profit"
+                placeholder="profit"
+              />
+            </div>
+            <div class="form__row">
+              <div class="city-container"></div>
+              <input
+                class="form__input form__input--city"
+                placeholder="city..."
+              />
+              <div class="clearbtn-container"></div>
+            </div>
+
+            <button type="submit" class="btn form__btn">Add</button>
+          </form>
+
+          <div class="adresses">
+            <div
+              class="autocomplete-container"
+              id="autocomplete-container"
+            ></div>
+          </div>
+        </ul>
+      </div>
+
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyrigth">
+        &copy; Copyright 2022 @ <span>BranchFinder</span>
+      </div>
+    </footer>
+
+    <!-- icons script -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
